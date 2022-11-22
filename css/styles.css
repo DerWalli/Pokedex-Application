@@ -9,6 +9,7 @@
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       line-height: 1.6;
+      background-color: antiquewhite;
       }
   
   h1 {
@@ -38,4 +39,22 @@
     a:active {
       /* selected link */
       color: var(--secondary-color);
+    }
+    .pokemon-list {
+      list-style-type: none;
+      display: inline-block;
+      margin-left: 15px;
+      font-weight: 500;
+      padding: 10px;
+      
+    }
+    .pokemon-list__item {
+      background-color: #d0c3b3;
+      list-style-type: none;
+
+    }
+    .pokemon-list__item-big {
+      font-weight: 600;
+      background-color: #d0bfb3;
+
     }
