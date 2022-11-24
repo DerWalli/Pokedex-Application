@@ -37,31 +37,24 @@ pokemonRepository.add({ name: 'Testaddition-mon', height: 1, type: ['PC', 'Papa'
 
 //Display Pokemon
 pokemonRepository.getAll().forEach(function(pokemon){
+    let list = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('buttonClass');
+    listItem.appendChild(button);
+    list.appendChild(listItem);
+})
+/*
+pokemonRepository.getAll().forEach(function(pokemon){
+    let test = document.querySelector(".new-list")
     if(pokemon.height > 1.0) {
         document.write('<li class="pokemon-list__item"><span class="Pokename">' + pokemon.name + "</span> (height: " + pokemon.height + " meters) " + '- <span class="big">Wow, that is big!</span><br><br></li>')
     }
     else{
         document.write('<li class="pokemon-list__item"><span class="Pokename">' + pokemon.name + "</span> (height: " + pokemon.height + " meters)<br><br></li>")}
 })
-
-
-
-
-// ---- old Code, saved for Documentation  ----
-
-/*function printArrayDetails(list){
-    for (let i = 0;
-        i < list.length; i++) {
-        if(list[i].height > 1.0) {
-            document.write('<li class="pokemon-list__item"><span class="Pokename">' + list[i].name + "</span> (height: " + list[i].height + " meters) " + '- <span class="big">Wow, that is big!</span><br><br></li>')
-        }
-        else{
-            document.write('<li class="pokemon-list__item"><span class="Pokename">' + list[i].name + "</span> (height: " + list[i].height + " meters)<br><br></li>")}
-}
-}
-
-printArrayDetails(pokemonList);
-printArrayDetails(pokemonList2);
 */
+
 
 
