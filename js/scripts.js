@@ -25,9 +25,20 @@ let pokemonRepository = (function () {
         return pokemonList;
     }
 
+    function addListItem(pokemon) {
+        let list = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('buttonClass');
+        listItem.appendChild(button);
+        list.appendChild(listItem);
+    }
+
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 
 
@@ -37,13 +48,8 @@ pokemonRepository.add({ name: 'Testaddition-mon', height: 1, type: ['PC', 'Papa'
 
 //Display Pokemon
 pokemonRepository.getAll().forEach(function(pokemon){
-    let list = document.querySelector('.pokemon-list');
-    let listItem = document.createElement('li');
-    let button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add('buttonClass');
-    listItem.appendChild(button);
-    list.appendChild(listItem);
+    pokemonRepository.addListItem(pokemon)
+        
 })
 /*
 pokemonRepository.getAll().forEach(function(pokemon){
