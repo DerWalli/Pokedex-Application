@@ -108,6 +108,15 @@
     .modal-container.is-visible h1{
       color: #282828;
      }
+
+    .modal-close {
+      float: right;
+      -webkit-appearance: none;
+      border: 0;
+      background: none;
+      color: #777;
+      text-decoration: underline;
+    }
   
     .modal {
       margin: auto;

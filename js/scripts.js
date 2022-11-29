@@ -75,6 +75,11 @@ let pokemonRepository = (function () {
             let modal = document.createElement('div');
             modal.classList.add('modal');
       
+            let closeButtonElement = document.createElement('button');
+            closeButtonElement.classList.add('modal-close');
+            closeButtonElement.innerText = 'X';
+            closeButtonElement.addEventListener('click', hideModal);
+
             let title = document.createElement('h1');
             title.innerText = pokemon.name;
       
@@ -87,6 +92,7 @@ let pokemonRepository = (function () {
             let pokemonTypes = document.createElement('p');
             pokemonTypes.innerText = "Type: " + pokemon.types;
       
+            modal.appendChild(closeButtonElement);
             modal.appendChild(title);
             modal.appendChild(pokemonImage);
             modal.appendChild(pokemonHeight);
