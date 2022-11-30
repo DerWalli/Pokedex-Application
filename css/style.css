@@ -12,6 +12,7 @@ body {
 
 .head {
   background-color: var(--background-color);
+  padding-left: 50px;
 }
 
 .pokemon-header {
